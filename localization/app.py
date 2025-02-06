@@ -14,7 +14,7 @@ app.config['BABEL_TRANSLATION_DIRECTORIES'] = './translations' # Supported Langu
 # Set Flask-Babel to use best locale for the user
 def get_locale():
     # Use request headers or a user-specific preference to determine locale
-    return request.accept_languages.best_match(['en', 'fr'])
+    return request.accept_languages.best_match(['en', 'fr', 'es'])
 
 # Manually initialize locale selector with Babel
 babel.init_app(app, locale_selector=get_locale)
